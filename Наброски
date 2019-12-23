@@ -1,0 +1,141 @@
+
+
+
+Naming :
+
+https://medium.com/coding-skills/clean-code-101-meaningful-names-and-functions-bf450456d90c
+
+
+https://dev.to/danialmalik/a-beginner-s-guide-to-clean-code-part1-naming-conventions-139l
+
+***
+
+"Naming" is a very important step of any process. We put a lot of thought into naming our children because we understand its importance. But when we do the same for our code, we don't have enough time for it. We either think that we already know the best naming practices or we just don't think that it's worth our time. Bad variable names might seem okay in the start but when the code base is getting bigger with many more developers working on it, it just gets so much difficult to manage and coordinate our efforts. Our code is our creation, therefore, we ought to name it properly at the very least.
+
+***
+
+ ** Intention of the variable should be clear from its name. 
+
+If you have to write a comment to make the purpose of the variable clear, rethink the name.
+
+
+ ** Do not use variable names which could misguide other developers. 
+
+An example would be naming a collection of Person objects persons_list when it is not actually a List. This name could misguide other developers towards thinking that it is a List type object. Therefore naming it persons_collection would be a better choice.
+
+
+ ** Variable names should be meaningfully distinct 
+
+
+ ** Variable names should be pronounceable. 
+
+!!! Also, we should easily use phpstorm functionallity to navigate
+
+ ** Searchable variables and constants should be used. 
+
+
+ **+ Class names should always be nouns. 
+
+Methods
+
+ ** Method names should have a verb 
+
+ ** Decide a standard for names serving similar purposes. 
+
+ ** Use context with variable names wherever is necessary.
+
+http://blog.cleancoder.com/uncle-bob/2011/11/22/Clean-Architecture.html
+
+
+
+----------------------------------
+
+!!! We should program brain correctly
+
+Developer should not spend a lot of time to understand code (it should be redeable like natural language, within conventions)
+
+Decide ahead of starting the development that what kind of conventions are you going to follow and have every developer follow those.
+
+by Robert C. Martin (Uncle Bob)
+
+The Brain Problem
+
+
+Imagine an information processing system composed of over 100 billion components that are deeply interconnected to one another. The interconnections are physical and dedicated – they aren’t on a buss. Imagine that the entire system is an analog computer. Analog computers are much faster, if less accurate, than digital computers. Imagine that the immense memory capacity of this device is also analog. The whole system is composed of myriads of feedback loops, filters, routers, sorters, and many more functions that we cannot even begin to imagine.
+
+Imagine that each one of those 100 billion components are, themselves, highly complex and powerful analog information processors capable of transforming and communicating immense amounts of data in very short times. Imagine that at the core of each of these massive analog components there is an array of tens of thousands of digital processors executing a digital program that is tuned and customized just for it.
+
+That’s what a human brain is. A human brain contains one hundred billion neurons. Each neuron is physically connected to thousands upon thousands of other neurons. Neuronal signals are analog in nature. Information is contained in the rate at which neurons fire. It is the pulse rate, not the pulses themselves, that contain and transmit information.
+
+Each Neuron is, itself, a fantastically complicated information processor. Chemical signals, analog in nature, are communicated through an intricate labyrinth of fibers, tubules, channels, and membranes that are continuously forming and changing, and that specifically interconnect the components within the cell in the most dynamic fashion. The signals are contained in the quantity and nature of the tens of thousands of proteins that the cell can create, along with ions and other molecule concentrations. Virtually every molecule in a cell is a component in this processor. And each molecule can operate at the speed of molecular interactions. (i.e. fast). The raw information processing power of a single cell is vastly superior to a modern laptop.
+
+What’s more cells signal each other using chemicals. Some simply send chemical signals to their neighbors. Others dump chemicals into the bloodstream to communicate with cells on the other side of the body. The number and form of chemical interconnections between and within cells is daunting.
+
+If you want to get a flavor for how impressive this cellular machinery is, just watch this video. No. Don’t just watch it. Study it!
+
+At the heart of each neuron there is a vast array of tens of thousands of digital processors, working to copy, repair, transmit, and execute the digital instructions contained within the DNA. These processors are, themselves, influenced by the analog chemical signaling within the cell.
+
+So here’s the bottom line. Your brain is a highly efficient analog computer composed of a deeply interconnected array of one hundred billion analog processors of immense computational power, each driven by tens of thousands of digital processors that are monitored and controlled through interactions both from within and without.
+
+Or, to say this another way, virtually every molecule, if not every atom, in your brain is an active component in the information processing going on between your ears.
+
+The idea that our meager internet, which indirectly interconnects only a trifling few hundreds of millions of pitifully weak serial processors, could process the information of a single brain is absurd.
+
+No, we will not be achieving artificial sentience any time soon.
+
+----------------------------------
+
+
+https://en.wikipedia.org/wiki/Abstraction_layer
+
+
+
+
+https://en.wikipedia.org/wiki/Fundamental_theorem_of_software_engineering
+Fundamental theorem of software engineering
+
+
+
+
+
+    We can solve any problem by introducing an extra level of indirection. 
+
+The theorem does not describe an actual theorem that can be proven; rather, it is a general principle for managing complexity through abstraction.
+
+The theorem is often expanded by the humorous clause "…except for the problem of too many levels of indirection," referring to the fact that too many abstractions may create intrinsic complexity issues of their own. For example, the use of protocol layering in computer networks, which today is ubiquitous, has been criticized in ways that are typical of more general disadvantages of abstraction.[3] Here, the adding of extra levels of indirection may cause higher layers to duplicate the functionality of lower layers, leading to inefficiency, and functionality at one layer may need data present only at another layer, which fundamentally violates the goal of separation into different layers. 
+
+
+
+
+https://en.wikipedia.org/wiki/Indirection
+
+In computer programming, indirection (also called dereferencing) is the ability to reference something using a name, reference, or container instead of the value itself. The most common form of indirection is the act of manipulating a value through its memory address. For example, accessing a variable through the use of a pointer. A stored pointer that exists to provide a reference to an object by double indirection is called an indirection node. In some older computer architectures, indirect words supported a variety of more-or-less complicated addressing modes.
+
+A famous aphorism of David Wheeler goes: "All problems in computer science can be solved by another level of indirection" (the "fundamental theorem of software engineering").[1] This is often deliberately mis-quoted with "abstraction layer" substituted for "level of indirection". An often cited corollary to this is, "...except for the problem of too many layers of indirection."
+
+A humorous Internet memorandum, RFC 1925, insists that:
+
+    (6) It is easier to move a problem around (for example, by moving the problem to a different part of the overall network architecture) than it is to solve it.
+
+        (6a) (corollary). It is always possible to add another level of indirection.
+
+Object-oriented programming makes use of indirection extensively, a simple example being dynamic dispatch. Higher-level examples of indirection are the design patterns of the proxy and the proxy server. Delegation is another classic example of an indirection pattern. In strongly typed interpreted languages with dynamic datatypes, most variable references require a level of indirection: first the type of the variable is checked for safety, and then the pointer to the actual value is dereferenced and acted on.
+
+Recursive data types are usually implemented using indirection, because otherwise if a value of a datatype can contain the entirety of another value of the same datatype, there is no limit to the size a value of this datatype could need.
+
+When doing symbolic programming from a formal mathematical specification the use of indirection can be quite helpful. To start with a simple example the variables x, y and z in an equation such as z = x 2 + y 2 {\displaystyle z={\sqrt {x^{2}+y^{2}}}} z = \sqrt{ x^2 + y^2} can refer to any number. One could imagine objects for various numbers and then x, y and z could point to the specific numbers being used for a particular problem. The simple example has its limitation as there are infinitely many real numbers. In various other parts of symbolic programming there are only so many symbols. So to move on to a more significant example, in logic the formula α can refer to any formula, so it could be β, γ, δ, ... or η→π, ς ∨ σ, ... When set-builder notation is employed the statement Δ={α} means the set of all formulae — so although the reference is to α there are two levels of indirection here, the first to the set of all α and then the second to a specific formula for each occurrence of α in the set Δ. 
+
+
+
+
+Using delegation 
+
+
+
+https://en.wikipedia.org/wiki/Forwarding_(object-oriented_programming)
+
+
+https://medium.com/better-programming/why-you-need-to-stop-using-else-statements-5b1fd09dea9e
+
+
+PRACTICAL PART
